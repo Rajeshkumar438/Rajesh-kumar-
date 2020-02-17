@@ -1,0 +1,258 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+
+.flybutton{
+    background-color:tomato;
+    display: flex;
+    width: fit-content;
+    border-radius: 40px;
+    padding: 10px;
+    display: flex;
+}
+.flybutton input{
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    outline: none;
+    transition: 0.5s;
+    width: 0px;
+    color:black;
+    font-weight: 400;
+    font-size: 16px;
+}
+.white{
+    color:black;
+    border: none;
+    font-size: 18px;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+   background-color:transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   transition: 0.6s;
+}
+.flybutton:hover>input{
+    width: 430px;
+    padding-left: 20px;
+    
+}
+.flybutton input:focus{
+    padding-left: 20px;
+}
+
+.flybutton:hover>.icon{
+    background-color: wheat;
+ 
+    
+}
+.flybutton input:focus,
+.flybutton input:valid{
+    width: 430px;
+    padding-left: 20px;
+}
+.flybutton input:focus~.icon,
+.flybutton input:valid~.icon{
+    background-color: wheat;
+}
+
+
+
+.main{
+    display: flex;
+    background-image: url(piza-3010062.jpg);
+    background-size: cover;
+
+}
+.left{
+  
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(0,0,0,0.8);
+}
+form{
+    animation-name: slide-register;
+    animation-duration: 1.5s ;
+
+    height: 570px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.right{
+    height: 100vh;
+    width: 50vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.rightcon{
+    animation-name: slide-order;
+    animation-duration: 1.5s  ;
+    height: 18vh;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.position input{
+    width: 300px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    outline:none;
+    padding: 8px 0px 0px 0px;
+    font-size: 16px;
+    color: wheat;
+}
+form h1{
+    display: flex;
+    align-self: center;
+}
+.signbutton{
+    height: 40px;
+    width: 70px;
+    border-radius: 49px;
+    border: none;
+    background-color:#46acec;
+    outline: none;
+
+}
+.signbutton:hover{
+    position: relative;
+    top: -2.5px;
+    box-shadow: 8px 8px 10px rgb(0, 0, 0);
+    cursor: pointer;
+   
+    
+
+}
+.signbutton:active{
+    position: relative;
+    top: 2.5px;
+    box-shadow: 4px 4px 5px black;
+
+}
+.position{
+    position: relative;
+}
+label{
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    color: tomato;
+    pointer-events: none;
+    transition: 0.4s;
+}
+.position i{
+    margin-right: 8px;
+}
+.position input:focus~label,
+.position input:valid~label{
+    font-size: 11px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+   
+    color: #46acec;
+}
+@keyframes slide-register{
+    from{
+        transform: translateY(-750px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slide-order{
+    from{
+        transform: translateX(-700px);
+    }
+    to{
+        transform: translate(0px);
+    }
+}
+
+@media(max-width:1120px){
+    .rightcon{
+        height: 40vh;
+        justify-content: space-around;
+
+    }
+}
+@media(max-width:610px){
+    .position input{
+        width: 200px;
+}
+}
+@media(max-width:1040px){
+    
+        .flybutton:hover>input{
+            width: 200px;
+            padding-left: 20px;
+            
+        }
+        .flybutton input:focus{
+            padding-left: 20px;
+        }
+        
+        .flybutton:hover>.icon{
+            background-color: wheat;
+            
+        }
+        .flybutton input:focus,
+        .flybutton input:valid{
+            width: 200px;
+            padding-left: 20px;
+        }
+        .flybutton input:focus~.icon,
+        .flybutton input:valid~.icon{
+            background-color: wheat;
+        }
+       
+}
+@media(max-width:605px){
+    
+    .flybutton:hover>input{
+        width: 100px;
+        padding-left: 20px;
+        
+    }
+    .flybutton input:focus{
+        padding-left: 20px;
+    }
+    
+    .flybutton:hover>.icon{
+        background-color: wheat;
+        
+    }
+    .flybutton input:focus,
+    .flybutton input:valid{
+        width: 100px;
+        padding-left: 20px;
+    }
+    .flybutton input:focus~.icon,
+    .flybutton input:valid~.icon{
+        background-color: wheat;
+    }
+   
+}
+ .left h1{
+    color: white;
+}
